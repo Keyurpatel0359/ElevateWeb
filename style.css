@@ -1,0 +1,235 @@
+/* VARIABLES */
+:root {
+  --primary: #4338CA;       /* Vivid Blue */
+  --primary-dark: #312E81;  /* Dark Violet */
+  --accent: #111827;        /* Very Dark Gray */
+  --background: #F0F4FF;    /* Soft Light Blue */
+  --surface: #FFFFFF;       /* Pure White */
+  --border: #E0E7FF;        /* Light Blue Violet */
+
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+  --font-display: 'Raleway', sans-serif;
+
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(67, 56, 202, 0.15);
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--background);
+  color: var(--accent);
+  line-height: 1.6;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  font-family: var(--font-display);
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-family: var(--font-secondary);
+  color: #4B5563;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.button {
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+  background: var(--primary-dark);
+  box-shadow: 0 0 10px var(--primary-dark);
+  outline: none;
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* TEAM GRID - Centered Cards */
+.team-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.team-grid .card {
+  width: 300px;
+}
+
+/* CARD */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(67, 56, 202, 0.25);
+}
+
+.card p {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* HEADINGS */
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin-bottom: 20px;
+  font-family: var(--font-display);
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--primary);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  margin-bottom: 12px;
+  color: var(--primary-dark);
+}
+
+/* FORM */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--surface);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  background: #fff;
+  color: var(--accent);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9CA3AF;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 5px var(--primary);
+}
+
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  padding: 30px;
+  text-align: center;
+  font-size: 0.95rem;
+  border-top: 1px solid var(--border);
+  color: #4B5563;
+}
+
+/* LINK FOCUS */
+a:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+form .button {
+  display: block;
+  margin: 0 auto;
+}
+
