@@ -12,9 +12,7 @@
   <meta property="og:image" content="elevateweb-preview.png" />
   <title>ElevateWeb - Strategic Website Creators</title>
   
-  <!-- Improved font loading by reducing unnecessary weights -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
-  
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -51,7 +49,6 @@
         <h2 id="technologies-heading">Technologies We Use</h2>
         <div class="skills-scroll" aria-label="Scrolling list of technologies logos" role="list">
           <div class="skills-track">
-            <!-- Skill items are now list roles for better semantic -->
             <div class="skill-item" role="listitem" title="Bootstrap">
               <img src="bootstrap.jpg" alt="Bootstrap logo" loading="lazy" />
               <span>Bootstrap</span>
@@ -80,50 +77,50 @@
               <img src="python.jpg" alt="Python logo" loading="lazy" />
               <span>Python</span>
             </div>
-            <!-- Repeat skill items here if needed for scrolling effect -->
-	<div class="skill-item" role="listitem" title="Bootstrap">
-              <img src="bootstrap.jpg" alt="Bootstrap logo" loading="lazy" />
-              <span>Bootstrap</span>
-            </div>
-            <div class="skill-item" role="listitem" title="CSS">
-              <img src="css.png" alt="CSS logo" loading="lazy" />
-              <span>CSS</span>
-            </div>
-            <div class="skill-item" role="listitem" title="Django">
-              <img src="django.png" alt="Django logo" loading="lazy" />
-              <span>Django</span>
-            </div>
-            <div class="skill-item" role="listitem" title="Figma">
-              <img src="figma.png" alt="Figma logo" loading="lazy" />
-              <span>Figma</span>
-            </div>
-            <div class="skill-item" role="listitem" title="HTML">
-              <img src="html.png" alt="HTML logo" loading="lazy" />
-              <span>HTML</span>
-            </div>
-            <div class="skill-item" role="listitem" title="JavaScript">
-              <img src="js.png" alt="JavaScript logo" loading="lazy" />
-              <span>JavaScript</span>
-            </div>
-            <div class="skill-item" role="listitem" title="Python">
-              <img src="python.jpg" alt="Python logo" loading="lazy" />
-              <span>Python</span>
-            </div>
-
+          </div>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="team-heading">
-        <h2 id="team-heading">Meet the Team</h2>
+      <section class="section">
+        <h2>Meet the Team</h2>
         <div class="team-grid">
-          <article class="card" tabindex="0" aria-label="Team member Yash Makwana">
+          <div class="card">
             <h3>Yash Makwana</h3>
-            <p>Backend Developer<br /><strong>Python | Django | APIs | Security</strong></p>
-          </article>
-          <article class="card" tabindex="0" aria-label="Team member Keyur Dudhatra">
+            <p>Backend Developer<br><strong>Python | Django | APIs | Security</strong></p>
+          </div>
+          <div class="card">
             <h3>Keyur Dudhatra</h3>
-            <p>UI/UX Designer<br /><strong>Figma | Webflow | Prototyping | Branding</strong></p>
-          </article>
+            <p>UI/UX Designer<br><strong>Figma | Webflow | Prototyping | Branding</strong></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ✅ Review System Section -->
+      <section class="section" id="reviews" aria-labelledby="reviews-heading">
+        <h2 id="reviews-heading">Client Reviews</h2>
+
+        <form id="review-form" aria-label="Review submission form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="rating">Rating:</label>
+          <select id="rating" name="rating" required>
+            <option value="">Select</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+          </select>
+
+          <label for="comment">Comment:</label>
+          <textarea id="comment" name="comment" rows="4" required></textarea>
+
+          <button type="submit" class="button">Submit Review</button>
+        </form>
+
+        <div id="review-list" class="review-list">
+          <!-- Reviews will appear here -->
         </div>
       </section>
 
@@ -141,5 +138,28 @@
       </p>
     </footer>
   </div>
+
+  <!-- ✅ Review System Script -->
+  <script>
+    document.getElementById('review-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const rating = document.getElementById('rating').value;
+      const comment = document.getElementById('comment').value.trim();
+
+      if (name && rating && comment) {
+        const reviewList = document.getElementById('review-list');
+        const reviewItem = document.createElement('div');
+        reviewItem.classList.add('card');
+        reviewItem.innerHTML = `
+          <h3>${name} <span>(${rating}⭐)</span></h3>
+          <p>${comment}</p>
+        `;
+        reviewList.prepend(reviewItem);
+        this.reset();
+      }
+    });
+  </script>
 </body>
 </html>
