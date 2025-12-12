@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blisee — Social Media Marketing, Meta Ads, SEO & Website Services</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ---------- BASE ---------- */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f9f9fb;color:#222;}
+a{text-decoration:none;color:inherit;}
+section{padding:80px 7%;}
+
+/* ---------- NAVBAR ---------- */
+nav{
+  width:100%;position:fixed;top:0;left:0;z-index:999;
+  background:#ffffffd9;backdrop-filter:blur(8px);
+  padding:18px 7%;display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid #eee;
+}
+nav .logo{font-size:1.7rem;font-weight:700;color:#6a00ff;}
+nav ul{list-style:none;display:flex;gap:40px;}
+nav ul li a{font-weight:500;transition:.3s;}
+nav ul li a:hover{color:#6a00ff;}
+
+/* ---------- HERO ---------- */
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+}
+.hero h1{
+  font-size:3.5rem;
+  background:linear-gradient(45deg,#6a00ff,#00c8ff);
+  -webkit-background-clip:text;color:transparent;
+}
+.hero p{max-width:620px;color:#555;margin:20px 0;}
+.hero .cta{
+  margin-top:25px;display:flex;gap:20px;
+}
+.btn{
+  padding:12px 26px;border-radius:40px;font-weight:500;
+  transition:.3s;
+}
+.btn-primary{
+  background:linear-gradient(45deg,#6a00ff,#00c8ff);
+  color:#fff;box-shadow:0 8px 20px #6a00ff33;
+}
+.btn-primary:hover{transform:translateY(-3px);}
+.btn-outline{
+  border:2px solid #6a00ff;color:#6a00ff;
+}
+.btn-outline:hover{
+  background:#6a00ff;color:#fff;
+}
+
+/* ---------- SERVICE SECTION ---------- */
+.services-box{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;margin-top:50px;
+}
+.service-card{
+  background:#fff;padding:35px;border-radius:20px;
+  border:1px solid #eee;transition:.3s;
+}
+.service-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 25px #0001;
+}
+.service-card h3{font-size:1.4rem;margin-bottom:10px;}
+.service-card p{font-size:.95rem;color:#555;}
+
+/* ---------- FEATURES SPLIT ---------- */
+.split{
+  display:flex;gap:50px;align-items:center;flex-wrap:wrap;
+}
+.split img{
+  width:100%;max-width:480px;border-radius:24px;
+  box-shadow:0 20px 40px #0002;
+}
+.split h2{font-size:2.4rem;}
+.split p{margin:15px 0;color:#555;}
+
+/* ---------- PRICING ---------- */
+.pricing-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:35px;margin-top:40px;
+}
+.plan{
+  background:#fff;padding:35px;border-radius:22px;
+  border:1px solid #eee;transition:.3s;position:relative;
+}
+.plan:hover{
+  transform:translateY(-6px);box-shadow:0 15px 25px #0001;
+}
+.plan h3{font-size:1.5rem;}
+.plan .price{font-size:2.2rem;margin:15px 0;color:#6a00ff;}
+.plan ul{list-style:none;margin:20px 0;}
+.plan ul li{margin:8px 0;color:#444;font-size:.95rem;}
+.popular{
+  border:2px solid #6a00ff;
+}
+.popular::before{
+  content:"POPULAR";position:absolute;top:-12px;left:20px;
+  background:#6a00ff;color:#fff;padding:4px 12px;border-radius:12px;
+  font-size:.75rem;font-weight:600;
+}
+
+/* ---------- CONTACT ---------- */
+.contact form{
+  max-width:550px;margin:auto;display:flex;flex-direction:column;gap:18px;
+}
+.contact input,.contact textarea{
+  padding:14px;border-radius:14px;border:1px solid #ddd;
+  font-size:1rem;width:100%;
+}
+.contact button{
+  padding:14px;border-radius:40px;border:none;
+  background:linear-gradient(45deg,#6a00ff,#00c8ff);
+  color:#fff;font-size:1.1rem;
+  cursor:pointer;transition:.3s;
+}
+.contact button:hover{transform:translateY(-3px);}
+
+/* ---------- FOOTER ---------- */
+footer{
+  background:#111;color:#fff;text-align:center;padding:30px 0;margin-top:50px;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Blisee</div>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Scale Your Brand with Blisee</h1>
+  <p>We help businesses grow through Social Media Marketing, Meta Ads, SEO and High-Converting Websites. Your growth engine starts here.</p>
+  <div class="cta">
+    <a href="#contact" class="btn btn-primary">Get Free Consultation</a>
+    <a href="#services" class="btn btn-outline">View Services</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2 style="text-align:center;font-size:2.5rem;">Our Core Services</h2>
+  <p style="text-align:center;color:#555;margin-top:12px;">Everything your business needs for digital growth</p>
+
+  <div class="services-box">
+    <div class="service-card">
+      <h3>Social Media Marketing</h3>
+      <p>Instagram, Facebook & YouTube optimization, content planning, branding & engagement strategy.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Meta Ads & Paid Campaigns</h3>
+      <p>ROI-focused Facebook/Instagram ads, advanced targeting, retargeting & conversion funnels.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>SEO & Google Ranking</h3>
+      <p>Website optimization, keyword ranking, local SEO, traffic growth & complete analytics.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Website Development</h3>
+      <p>Fast, modern, SEO-friendly business websites that convert visitors into real customers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT FEATURE -->
+<section>
+  <div class="split">
+    <div>
+      <h2>Why Brands Choose Blisee?</h2>
+      <p>We focus on performance, not just posting. Our strategies bring real customers, leads, engagement and brand visibility.</p>
+      <p>We use AI-powered tools, modern design principles and data-driven marketing to deliver guaranteed growth.</p>
+      <a href="#contact" class="btn btn-primary">Grow with Us</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=900&q=60" />
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <h2 style="text-align:center;font-size:2.5rem;">Affordable Pricing</h2>
+  <p style="text-align:center;color:#555;margin-top:12px;">Choose a plan that fits your business</p>
+
+  <div class="pricing-grid">
+    <div class="plan">
+      <h3>Starter</h3>
+      <div class="price">₹5,999/mo</div>
+      <ul>
+        <li>Instagram + Facebook Management</li>
+        <li>8 Posts / Month</li>
+        <li>Hashtag Research</li>
+        <li>Basic SEO Setup</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Choose Plan</a>
+    </div>
+
+    <div class="plan popular">
+      <h3>Growth</h3>
+      <div class="price">₹12,999/mo</div>
+      <ul>
+        <li>Instagram + Facebook + Google</li>
+        <li>12–15 Posts / Month</li>
+        <li>Meta Ads Management</li>
+        <li>Full SEO Optimization</li>
+        <li>Monthly Reports</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Choose Plan</a>
+    </div>
+
+    <div class="plan">
+      <h3>Premium</h3>
+      <div class="price">₹22,999/mo</div>
+      <ul>
+        <li>Full SMM + Meta Ads + SEO</li>
+        <li>High-Level Website</li>
+        <li>Branding + Strategy</li>
+        <li>Advanced Funnels</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Choose Plan</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2 style="text-align:center;font-size:2.5rem;">Get in Touch</h2>
+  <p style="text-align:center;color:#555;margin-bottom:20px;">Let’s build your digital presence</p>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="text" placeholder="Phone Number" required>
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 Blisee — All Rights Reserved.
+</footer>
+
+</body>
+</html>
