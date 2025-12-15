@@ -1,518 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Blisee — SMM • Meta Ads • SEO • Websites</title>
-  <meta name="description" content="Blisee is a premium growth agency offering Social Media Marketing, Meta Ads, SEO and conversion-first websites. Glassmorphism + Gradient luxury design." />
-  <meta name="keywords" content="Blisee, Social Media Marketing, Meta Ads, SEO, Website Development, SMM Agency" />
-  <meta name="author" content="Blisee" />
-  <meta property="og:title" content="Blisee — Growth Agency" />
-  <meta property="og:description" content="Social Media Marketing • Meta Ads • SEO • Websites — Blisee helps brands scale with performance-driven strategies." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="blisee-og.png" />
-  <meta name="theme-color" content="#0b0320" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect rx='20' width='100' height='100' fill='%237B3FE4'/%3E%3Ctext x='50' y='60' font-size='50' text-anchor='middle' fill='white' font-family='Inter, Arial'%3EB%3C/text%3E%3C/svg%3E" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Nivara — Performance Marketing Studio</title>
+<meta name="description" content="Nivara is a performance-driven Meta Ads, Google Ads & Social Media Marketing growth studio delivering measurable ROI." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-1:#061a16;
+  --bg-2:#020b0a;
+  --glass:rgba(255,255,255,.08);
+  --muted:rgba(255,255,255,.75);
+  --accent1:#2AFADF;
+  --accent2:#4C83FF;
+  --radius:20px;
+  --maxw:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Inter,system-ui;
+  background:
+    radial-gradient(700px 400px at 15% 10%, rgba(42,250,223,.18), transparent 40%),
+    radial-gradient(600px 360px at 85% 90%, rgba(76,131,255,.15), transparent 45%),
+    linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  color:#eafffb;line-height:1.8;
+}
+.wrap{max-width:var(--maxw);margin:auto;padding:40px 20px}
+section{padding:100px 20px}
+nav{
+  position:sticky;top:14px;z-index:50;display:flex;justify-content:space-between;align-items:center;
+  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.04));
+  backdrop-filter:blur(14px);padding:16px 26px;border-radius:18px;
+  border:1px solid rgba(255,255,255,.14);box-shadow:0 20px 60px rgba(0,0,0,.45)
+}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+nav a:hover{color:var(--accent2)}
+.brand{display:flex;align-items:center;gap:10px}
+.badge{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:grid;place-items:center;font-weight:800;color:#05060a}
+.btn{padding:14px 28px;border-radius:999px;font-weight:800;letter-spacing:.02em;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#02100d;text-decoration:none;box-shadow:0 12px 30px rgba(42,250,223,.35);display:inline-block}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center;position:relative}
+.hero h1{font-size:3rem;line-height:1.1;letter-spacing:-.02em;margin-bottom:20px}
+.hero h1 span{background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;color:transparent}
+.hero p{color:var(--muted);margin-bottom:20px;max-width:560px;font-size:1.1rem}
+.hero ul{margin:20px 0;list-style:none;padding-left:0}
+.hero ul li{margin-bottom:12px;color:var(--muted);font-weight:500}
+.hero-card{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04));padding:40px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.16);box-shadow:0 25px 60px rgba(0,0,0,.45);margin-top:20px}
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+/* SECTION HEADINGS */
+.section-head{text-align:center;margin-bottom:60px}
+.section-head h2{font-size:2.5rem;letter-spacing:-.02em;margin-bottom:14px}
+.section-head p{color:var(--muted);max-width:700px;margin:0 auto;font-size:1.05rem;line-height:1.6}
 
-  <style>
-    :root{
-      --bg-1: #0b0320;      /* deep */
-      --bg-2: #071033;      /* darker */
-      --glass: rgba(255,255,255,0.06);
-      --muted: rgba(255,255,255,0.72);
-      --accent1: #7B3FE4;   /* purple */
-      --accent2: #03C3FF;   /* cyan */
-      --card-radius: 16px;
-      --maxw: 1200px;
-      --ease: cubic-bezier(.2,.9,.2,1);
-    }
+/* GRIDS */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+.card,.step{padding:32px;border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);box-shadow:0 15px 40px rgba(0,0,0,.25);transition:.3s ease}
+.card:hover,.step:hover{transform:translateY(-6px);box-shadow:0 25px 60px rgba(0,0,0,.45)}
+.card span{color:var(--accent2);font-weight:600}
 
-    /* Reset */
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: radial-gradient(800px 400px at 10% 8%, rgba(123,63,228,0.12), transparent 6%),
-                  radial-gradient(700px 350px at 90% 90%, rgba(3,195,255,0.06), transparent 6%),
-                  linear-gradient(180deg,var(--bg-1),var(--bg-2));
-      color: #e9eefc;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.6;
-    }
+/* RESULTS */
+.results{padding:80px;border-radius:36px;background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.14)}
+.results .grid{text-align:center}
+.results .card h3{font-size:1.8rem;margin-bottom:8px}
+.results .card p{font-size:1rem;color:var(--muted)}
 
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px 22px;}
+/* CTA */
+.cta{text-align:center;padding:100px 24px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border-radius:36px;border:1px solid rgba(255,255,255,.12);margin-top:60px}
+.cta h2{font-size:2.8rem;margin-bottom:16px}
+.cta p{color:var(--muted);font-size:1.1rem;margin-bottom:26px}
+footer{text-align:center;padding:60px 20px;color:rgba(234,255,251,.6);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.01));border-radius:40px 40px 0 0;border-top:1px solid rgba(255,255,255,.14)}
 
-    /* NAV */
-    nav{
-      display:flex;justify-content:space-between;align-items:center;gap:12px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      padding:10px 16px;border-radius:14px;backdrop-filter: blur(8px);
-      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
-      position:sticky;top:14px;z-index:80;margin-bottom:18px;
-    }
-    .brand{display:flex;gap:12px;align-items:center}
-    .badge{
-      width:46px;height:46px;border-radius:12px;
-      background:linear-gradient(135deg,var(--accent1),var(--accent2));
-      display:grid;place-items:center;color:#05060a;font-weight:800;font-size:18px;
-      box-shadow:0 12px 34px rgba(123,63,228,0.12);
-    }
-    .brand h1{font-size:1.05rem;margin:0}
-    .brand p{margin:0;font-size:12px;color:var(--muted)}
-
-    .nav-links{display:flex;gap:18px;align-items:center}
-    .nav-links a{
-      color:var(--muted);text-decoration:none;font-weight:600;padding:8px 10px;border-radius:8px;
-      transition:all 180ms var(--ease)
-    }
-    .nav-links a:hover{color:var(--accent2);transform:translateY(-3px)}
-
-    .nav-actions{display:flex;gap:10px;align-items:center}
-    .btn{
-      padding:9px 14px;border-radius:12px;font-weight:700;border:none;cursor:pointer;transition:all 180ms var(--ease);
-    }
-    .btn-primary{
-      background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#05060a;box-shadow:0 10px 30px rgba(123,63,228,0.12);
-    }
-    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
-
-    /* HERO */
-    header.hero{
-      display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:60px 0 44px;
-    }
-    .hero-left .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(123,63,228,0.06);color:var(--accent2);font-weight:700;font-size:13px;margin-bottom:12px}
-    .hero-title{font-size:2.6rem;line-height:1.02;margin-bottom:12px;background:linear-gradient(90deg,#fff,#dfe6ff);-webkit-background-clip:text;color:transparent}
-    .hero-title .accent{background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;color:transparent}
-    .hero-desc{color:var(--muted);max-width:720px;font-size:1rem;margin-bottom:14px}
-
-    .hero-cta{display:flex;gap:12px;align-items:center;margin-top:10px}
-    .kpis{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-    .kpi{padding:10px 14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);min-width:120px;text-align:center}
-    .kpi strong{display:block;font-size:1.05rem;color:#fff}
-
-    .hero-right{
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-      padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);
-      backdrop-filter: blur(8px);
-    }
-    .audit h4{margin:0 0 8px 0;color:var(--accent2)}
-    .audit p{color:var(--muted);font-size:.95rem;margin-bottom:10px}
-
-    input, textarea, select{
-      width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#eaf5ff;
-    }
-    input::placeholder, textarea::placeholder{color:rgba(234,245,255,0.35)}
-    small.hint{color:var(--muted);font-size:13px}
-
-    /* SECTIONS */
-    section.section{padding:64px 0}
-    .section-head{font-size:1.4rem;color:var(--accent2);margin-bottom:6px}
-    .section-sub{color:var(--muted);max-width:760px;margin-bottom:18px}
-
-    /* SERVICES GRID - Glass cards */
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-    .card{
-      padding:18px;border-radius:12px;background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-      border:1px solid rgba(255,255,255,0.03);transition:all 200ms var(--ease);
-      display:flex;gap:12px;align-items:flex-start;
-    }
-    .card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(0,0,0,0.6)}
-    .icon{
-      width:56px;height:56px;border-radius:12px;display:grid;place-items:center;font-weight:800;
-      background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#05060a;box-shadow:0 10px 30px rgba(123,63,228,0.12)
-    }
-    .card h4{margin:0;font-size:1.05rem}
-    .card p{margin-top:6px;color:var(--muted);font-size:.95rem}
-
-    /* CASE STUDIES */
-    .cases{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
-    .case{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);display:flex;gap:12px;align-items:center}
-    .case img{width:84px;height:64px;border-radius:8px;object-fit:cover;filter:grayscale(6%)}
-
-    /* PRICING */
-    .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
-    .plan{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
-    .plan.pop{box-shadow:0 18px 46px rgba(123,63,228,0.12);border:1px solid rgba(123,63,228,0.22)}
-    .plan h4{margin:0;color:#fff}
-    .price{font-size:1.5rem;font-weight:800;margin:10px 0}
-    .plan ul{list-style:none;padding-left:0;color:var(--muted);margin-bottom:12px}
-    .ribbon{position:relative}
-    .ribbon::after{content:"MOST POPULAR";position:absolute;top:-10px;right:12px;background:linear-gradient(90deg,var(--accent1),var(--accent2));padding:6px 10px;border-radius:8px;font-size:11px;font-weight:700;color:#05060a}
-
-    /* REVIEWS */
-    .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-    .review{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
-    .review h5{margin:0 0 6px 0}
-    .review p{color:var(--muted);font-size:0.95rem}
-
-    /* CONTACT */
-    .contact-grid{display:grid;grid-template-columns:1fr 380px;gap:18px;align-items:start;margin-top:14px}
-    .contact-info{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
-    .contact-info strong{display:block;color:var(--accent2);margin-bottom:6px}
-
-    /* FOOTER */
-    footer{padding:28px 0;text-align:center;color:var(--muted);margin-top:28px}
-
-    /* FLOATING WA */
-    .wa{
-      position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,#25D366,#00C851);
-      padding:12px 14px;border-radius:50px;color:#05060a;font-weight:800;text-decoration:none;
-      box-shadow:0 14px 34px rgba(0,200,200,0.08);z-index:60
-    }
-
-    /* RESPONSIVE */
-    @media (max-width:980px){
-      header.hero{grid-template-columns:1fr}
-      .contact-grid{grid-template-columns:1fr}
-      .cases{grid-template-columns:1fr}
-      .grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
-    }
-    @media (max-width:560px){
-      .nav-links{display:none}
-      nav{padding:10px}
-      .brand p{display:none}
-      .wrap{padding:18px}
-    }
-  </style>
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .hero h1{font-size:2.2rem}
+}
+</style>
 </head>
 <body>
-  <div class="wrap" role="document">
+<div class="wrap">
 
-    <!-- NAV -->
-    <nav role="navigation" aria-label="Main navigation">
-      <div class="brand" aria-hidden="false">
-        <div class="badge">B</div>
-        <div>
-          <h1>Blisee</h1>
-          <p>Growth · Ads · SEO</p>
-        </div>
-      </div>
+<nav>
+  <div class="brand"><div class="badge">N</div><strong>Nivara</strong></div>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>  </div>
+</nav>
 
-      <div class="nav-links" role="menu" aria-label="Primary">
-        <a href="#home" onclick="scrollToSection('home')">Home</a>
-        <a href="#services" onclick="scrollToSection('services')">Services</a>
-        <a href="#about" onclick="scrollToSection('about')">About</a>
-        <a href="#reviews" onclick="scrollToSection('reviews')">Reviews</a>
-        <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
-      </div>
-
-      <div class="nav-actions" role="group" aria-label="Actions">
-        <button class="btn btn-ghost" onclick="scrollToSection('contact')">Talk</button>
-        <a class="btn btn-primary" href="https://wa.me/919586490706" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </nav>
-
-    <!-- HERO -->
-    <header id="home" class="hero" role="banner" aria-label="Hero">
-      <div class="hero-left">
-        <div class="tag">Growth-first SMM & Performance</div>
-        <h1 class="hero-title">Premium <span class="accent">Digital Growth</span> for ambitious brands</h1>
-        <p class="hero-desc">Blisee builds attention-grabbing creative, scales profitable Meta Ads, grows organic traffic with SEO and crafts conversion-first websites — focused on measurable revenue.</p>
-
-        <div class="hero-cta">
-          <button class="btn btn-primary" onclick="scrollToSection('contact')">Book Free Audit</button>
-          <a class="btn btn-ghost" href="#services">Explore Services</a>
-        </div>
-
-        <div class="kpis" aria-hidden="true">
-          <div class="kpi"><strong>50+</strong><span style="color:var(--muted);font-size:13px">Campaigns</span></div>
-          <div class="kpi"><strong>Avg 3.2x</strong><span style="color:var(--muted);font-size:13px">ROAS</span></div>
-          <div class="kpi"><strong>100%+</strong><span style="color:var(--muted);font-size:13px">Engagement ↑</span></div>
-        </div>
-      </div>
-
-      <aside class="hero-right" aria-labelledby="auditHeading">
-        <div class="audit">
-          <h4 id="auditHeading">Free 15-min Growth Audit</h4>
-          <p>Quick review of your socials, ad account and website — short tactical plan you'll receive on WhatsApp.</p>
-
-          <form id="auditForm" onsubmit="handleAudit(event)" novalidate>
-            <input id="aname" name="name" placeholder="Your name" required />
-            <input id="aphone" name="phone" placeholder="+91 9xxxxxxxxx" required />
-            <select id="aplatform" name="platform" aria-label="Platform">
-              <option>Instagram</option>
-              <option>Facebook</option>
-              <option>Google / SEO</option>
-              <option>Website / Landing Page</option>
-            </select>
-
-            <button type="submit" class="btn btn-primary" style="width:100%;margin-top:8px">Request Audit</button>
-            <div id="auditMsg" style="margin-top:8px;color:var(--muted);font-size:13px"></div>
-          </form>
-        </div>
-      </aside>
-    </header>
-
-    <!-- SERVICES -->
-    <section id="services" class="section" aria-labelledby="servicesHeading">
-      <h3 class="section-head" id="servicesHeading">Services</h3>
-      <p class="section-sub">SMM • Meta Ads • SEO • Websites — a full-stack growth approach to scale revenue and brand equity.</p>
-
-      <div class="grid" role="list">
-        <article class="card" role="listitem">
-          <div class="icon">S</div>
-          <div>
-            <h4>Social Media Marketing</h4>
-            <p>Strategy, short-form (Reels), community growth, brand voice and influencer collaborations crafted for attention & conversions.</p>
-          </div>
-        </article>
-
-        <article class="card" role="listitem">
-          <div class="icon">A</div>
-          <div>
-            <h4>Meta Ads Management</h4>
-            <p>Performance funnels, creative testing, audience segmentation, retargeting & ROAS-driven optimisation.</p>
-          </div>
-        </article>
-
-        <article class="card" role="listitem">
-          <div class="icon">🔍</div>
-          <div>
-            <h4>SEO & Organic Growth</h4>
-            <p>Technical audits, content clusters, local SEO, backlinks and analytics to increase high-intent traffic.</p>
-          </div>
-        </article>
-
-        <article class="card" role="listitem">
-          <div class="icon">W</div>
-          <div>
-            <h4>Websites & CRO</h4>
-            <p>Fast, secure landing pages and websites with conversion-focused UX and tracking to improve LTV and conversion rates.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section" aria-labelledby="aboutHeading">
-      <h3 class="section-head" id="aboutHeading">About Blisee</h3>
-      <p class="section-sub">We combine creative storytelling, data-driven paid strategies, and technical SEO to deliver measurable growth.</p>
-
-      <div style="display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:18px;align-items:start">
-        <div style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
-          <h4 style="margin:0 0 12px 0">Our Approach</h4>
-          <p style="color:var(--muted);margin-bottom:8px">Audit → Strategy → Creative → Scale. We measure what matters: revenue, leads and retention.</p>
-
-          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
-            <div style="padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)">
-              <strong>Data-First</strong><div style="color:var(--muted);font-size:13px">Metrics that drive decisions</div>
-            </div>
-            <div style="padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)">
-              <strong>Creative</strong><div style="color:var(--muted);font-size:13px">Native short-form ads & content</div>
-            </div>
-            <div style="padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)">
-              <strong>Scale</strong><div style="color:var(--muted);font-size:13px">Sustainable growth plans</div>
-            </div>
-          </div>
-        </div>
-
-        <aside style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
-          <strong style="display:block;margin-bottom:8px">Founder</strong>
-          <div style="color:var(--muted)">Keyur Dudhatra — Growth strategist with hands-on experience in SMM, Ads & SEO (Rajkot, India).</div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- CASE STUDIES -->
-    <section id="cases" class="section" aria-labelledby="casesHeading">
-      <h3 class="section-head" id="casesHeading">Selected Case Studies</h3>
-      <p class="section-sub">Short wins that moved the business needle.</p>
-
-      <div class="cases" aria-live="polite">
-        <div class="case">
-          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=60" alt="Retail case">
-          <div>
-            <strong>Local Retail — Rajkot</strong>
-            <div style="color:var(--muted);font-size:13px">Reels + WhatsApp funnel → weekday footfall +28%; WhatsApp orders +42%.</div>
-          </div>
-        </div>
-
-        <div class="case">
-          <img src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?auto=format&fit=crop&w=800&q=60" alt="D2C case">
-          <div>
-            <strong>D2C Skincare</strong>
-            <div style="color:var(--muted);font-size:13px">Meta Ads + landing page → CAC -35%; Repeat purchases +18%.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section id="pricing" class="section" aria-labelledby="pricingHeading">
-      <h3 class="section-head" id="pricingHeading">Pricing</h3>
-      <p class="section-sub">Transparent retainers that scale with results — upgrade when ready.</p>
-
-      <div class="pricing" style="margin-top:12px">
-        <div class="pricing-grid">
-          <div class="plan">
-            <h4>Starter</h4>
-            <div class="price">₹5,999 / mo</div>
-            <ul>
-              <li>1 platform SMM</li>
-              <li>8 posts / month</li>
-              <li>Basic Ads setup</li>
-              <li>Monthly report</li>
-            </ul>
-            <button class="btn btn-primary" onclick="scrollToSection('contact')">Choose</button>
-          </div>
-
-          <div class="plan pop">
-            <h4>Growth</h4>
-            <div class="price">₹12,999 / mo</div>
-            <ul>
-              <li>2 platforms + Reels</li>
-              <li>Meta Ads & retargeting</li>
-              <li>SEO improvements</li>
-              <li>Landing page + CRO</li>
-            </ul>
-            <button class="btn btn-primary" onclick="scrollToSection('contact')">Choose</button>
-          </div>
-
-          <div class="plan">
-            <h4>Premium</h4>
-            <div class="price">₹24,999 / mo</div>
-            <ul>
-              <li>All platforms</li>
-              <li>Full Ads + Funnels</li>
-              <li>Advanced SEO</li>
-              <li>Website included</li>
-            </ul>
-            <button class="btn btn-primary" onclick="scrollToSection('contact')">Choose</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- REVIEWS -->
-    <section id="reviews" class="section" aria-labelledby="reviewsHeading">
-      <h3 class="section-head" id="reviewsHeading">Client Reviews</h3>
-      <p class="section-sub">Real feedback from brands we've partnered with.</p>
-
-      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
-        <div style="flex:1;min-width:300px">
-          <form id="reviewForm" style="display:flex;flex-direction:column;gap:10px" onsubmit="addReview(event)">
-            <input id="rvName" placeholder="Your name" required />
-            <input id="rvRole" placeholder="Business / Role (optional)" />
-            <textarea id="rvMsg" rows="4" placeholder="Short review" required></textarea>
-            <button class="btn btn-primary" type="submit">Submit Review</button>
-          </form>
-        </div>
-
-        <div style="flex:1;min-width:300px">
-          <div id="reviewsList" class="reviews" aria-live="polite">
-            <div class="review"><h5>— Local Store, Rajkot</h5><p>Reels strategy doubled our enquiries in 2 weeks. Practical, fast-moving team.</p></div>
-            <div class="review"><h5>— D2C Skincare</h5><p>Ads team cut CAC significantly and delivered predictable results.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section" aria-labelledby="contactHeading">
-      <h3 class="section-head" id="contactHeading">Contact</h3>
-      <p class="section-sub">Ready to grow? Send a quick note and we’ll reply on WhatsApp shortly.</p>
-
-      <div class="contact-grid">
-        <form onsubmit="handleContact(event)" style="display:flex;flex-direction:column;gap:10px">
-          <input id="cname" placeholder="Your name" required />
-          <input id="cphone" placeholder="+91 9xxxxxxxxx" required />
-          <input id="cemail" placeholder="Email (optional)" type="email" />
-          <select id="cservice">
-            <option>Social Media Marketing</option>
-            <option>Meta Ads</option>
-            <option>SEO</option>
-            <option>Website</option>
-            <option>Full Growth Retainer</option>
-          </select>
-          <textarea id="cmsg" rows="4" placeholder="Short note (goals / budget)"></textarea>
-          <button class="btn btn-primary" type="submit">Send via WhatsApp</button>
-        </form>
-
-        <aside class="contact-info" aria-label="Contact details">
-          <strong>Contact</strong>
-          <div style="color:var(--muted);margin-bottom:10px">WhatsApp: +91 95864 90706</div>
-          <div style="color:var(--muted);margin-bottom:10px">Email: hello@blisee.com</div>
-          <div style="color:var(--muted)">Location: Rajkot, India • Remote across India</div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <div style="max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-        <div>© <span id="year"></span> Blisee — Social Media & Growth</div>
-        <div style="color:var(--muted)">Crafted for modern brands</div>
-      </div>
-    </footer>
-
-    <!-- FLOATING WHATSAPP -->
-    <a class="wa" href="https://wa.me/919586490706" target="_blank" rel="noopener" aria-label="WhatsApp Blisee">WhatsApp</a>
+<section class="hero">
+  <div>
+    <h1>Performance-Driven <span>Marketing Studio</span></h1>
+    <p>We help brands scale using Meta Ads, Google Ads, and Social Media Marketing systems designed for results.</p>
+    <ul>
+      <li>✔ Meta Ads campaigns that convert</li>
+      <li>✔ Google Ads targeting high-intent buyers</li>
+      <li>✔ Social Media that builds trust & authority</li>
+    </ul>
+    <a href="#contact" class="btn">Book Free Audit</a>
   </div>
+  <div class="hero-card">
+    <h3>What We Do Best</h3>
+    <p>Strategy → Creative → Ads → Scale. Every action focused on performance and growth.</p>
+  </div>
+</section>
 
-<script>
-  // set year
-  document.getElementById('year').innerText = new Date().getFullYear();
+<section id="services">
+  <div class="section-head">
+    <h2>Our Services</h2>
+    <p>Focused performance marketing services that directly increase revenue.</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Meta Ads (Facebook & Instagram)</h3>
+      <p>We create campaigns that drive leads, sales, and ROI with data-backed strategies.</p>
+      <span>Strategy • Funnels • Scaling</span>
+    </div>
+    <div class="card">
+      <h3>Google Ads</h3>
+      <p>High-intent search, display, and remarketing campaigns to capture ready-to-buy audiences.</p>
+      <span>Search • Display • Remarketing</span>
+    </div>
+    <div class="card">
+      <h3>Social Media Marketing (SMM)</h3>
+      <p>Content systems that grow your brand’s authority, engagement, and following.</p>
+      <span>Content • Reels • Engagement</span>
+    </div>
+  </div>
+</section>
 
-  // smooth scroll helper
-  function scrollToSection(id){
-    const el = document.getElementById(id);
-    if(!el) return window.scrollTo({top:0,behavior:'smooth'});
-    el.scrollIntoView({behavior:'smooth',block:'start'});
-  }
+<section id="process">
+  <div class="section-head">
+    <h2>Our Process</h2>
+    <p>Simple, repeatable, and performance-focused for every brand.</p>
+  </div>
+  <div class="grid">
+    <div class="step"><b>01</b><p>Research & Goals</p></div>
+    <div class="step"><b>02</b><p>Strategy & Setup</p></div>
+    <div class="step"><b>03</b><p>Launch & Test</p></div>
+    <div class="step"><b>04</b><p>Optimize & Scale</p></div>
+  </div>
+</section>
 
-  // Audit form -> open WhatsApp prefilled
-  function handleAudit(e){
-    e.preventDefault();
-    const name = document.getElementById('aname').value.trim();
-    const phone = document.getElementById('aphone').value.trim();
-    const platform = document.getElementById('aplatform').value;
-    const msgEl = document.getElementById('auditMsg');
-    if(!name || !phone){ msgEl.innerText = 'Please enter name and WhatsApp number.'; return; }
-    msgEl.innerText = 'Opening WhatsApp...';
-    const phoneClean = phone.replace(/\D/g,'');
-    const text = encodeURIComponent(`Hi Blisee, I'm ${name}. Please audit my ${platform} profile. Contact: ${phone}`);
-    window.open(`https://wa.me/${phoneClean}?text=${text}`, '_blank');
-    e.target.reset();
-    setTimeout(()=> msgEl.innerText = 'Requested — check WhatsApp.', 700);
-  }
+<section class="results">
+  <div class="section-head">
+    <h2>Why Brands Choose Nivara</h2>
+    <p>We focus on clarity, consistent results, and measurable ROI.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>ROI Focused</h3><p>Every action backed by data.</p></div>
+    <div class="card"><h3>Clear Reporting</h3><p>No confusion, only clarity.</p></div>
+    <div class="card"><h3>Lean Systems</h3><p>Only what works, nothing extra.</p></div>
+    <div class="card"><h3>Growth Mindset</h3><p>Built for long-term scaling.</p></div>
+  </div>
+</section>
 
-  // Contact form -> open WhatsApp prefilled
-  function handleContact(e){
-    e.preventDefault();
-    const name = document.getElementById('cname').value.trim();
-    const phone = document.getElementById('cphone').value.trim();
-    const service = document.getElementById('cservice').value;
-    const msg = document.getElementById('cmsg').value.trim();
-    if(!name || !phone){ alert('Please enter name and WhatsApp number.'); return; }
-    const phoneClean = phone.replace(/\D/g,'');
-    const text = encodeURIComponent(`Hello Blisee, I'm ${name}. Service: ${service}. Message: ${msg}. Phone: ${phone}`);
-    window.open(`https://wa.me/${phoneClean}?text=${text}`, '_blank');
-    e.target.reset();
-  }
+<section id="contact" class="cta">
+  <h2>Ready to Scale Smarter?</h2>
+  <p>Book a free strategy call with Nivara and start growing your brand today.</p>
+  <a href="https://wa.me/919586490706" class="btn">WhatsApp Us</a>
+</section>
 
-  // Reviews: add to list
-  function addReview(e){
-    e.preventDefault();
-    const name = document.getElementById('rvName').value.trim();
-    const role = document.getElementById('rvRole').value.trim();
-    const msg = document.getElementById('rvMsg').value.trim();
-    if(!name || !msg){ alert('Please add name and review'); return; }
-    const list = document.getElementById('reviewsList');
-    const div = document.createElement('div');
-    div.className = 'review';
-    div.innerHTML = `<h5>— ${name}${role?(' • '+role):''}</h5><p>${msg}</p>`;
-    list.prepend(div);
-    e.target.reset();
-  }
+<footer>
+  <p>© 2025 Nivara — Meta Ads • Google Ads • Social Media Marketing</p>
+</footer>
 
-  // accessibility: focus outlines on Tab
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Tab') document.body.classList.add('show-focus');
-  });
-</script>
+</div>
 </body>
 </html>
